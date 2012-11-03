@@ -1,5 +1,5 @@
 
-cmake_minimum_required(VERSION 2.8.0)
+cmake_minimum_required(VERSION 2.8.10)
 
 # Set package properties
 project(pthreads-win32)
