@@ -30,7 +30,7 @@ set(API
 	${PTHREADS_WIN32_SOURCE}/sched.h
 	${PTHREADS_WIN32_SOURCE}/semaphore.h)
 
-source_group(API FILES ${API})
+source_group(APIPROJ FILES ${API})
 
 set(SOURCES
 	${PTHREADS_WIN32_SOURCE}/attr.c
@@ -250,7 +250,7 @@ set(CMAKE_DEBUG_POSTFIX d)
 add_definitions(/DHAVE_PTW32_CONFIG_H)
 
 include_directories(${PTHREADS_WIN32_SOURCE})
-add_library(${PTHREADS_LIBRARY} ${PTHREADS_LIBTYPE} ${SOURCES} ${API} ${RESOURCES})
+add_library(${PTHREADS_LIBRARY} ${PTHREADS_LIBTYPE} ${SOURCES} ${APIPROJ} ${RESOURCES})
 
 set_target_properties(${PTHREADS_LIBRARY} PROPERTIES PUBLIC_HEADER ${API})
 
