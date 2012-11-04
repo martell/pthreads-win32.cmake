@@ -31,6 +31,8 @@ set(API
 	${PTHREADS_WIN32_SOURCE}/semaphore.h)
 
 source_group(API FILES ${API})
+set_target_properties(pthreads-win32 PROPERTIES PUBLIC_HEADER ${API})
+
 set(SOURCES
 	${PTHREADS_WIN32_SOURCE}/attr.c
 	${PTHREADS_WIN32_SOURCE}/barrier.c
