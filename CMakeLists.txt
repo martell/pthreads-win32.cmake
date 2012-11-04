@@ -31,7 +31,6 @@ set(API
 	${PTHREADS_WIN32_SOURCE}/semaphore.h)
 
 source_group(API FILES ${API})
-set_target_properties(pthreads-win32 PROPERTIES PUBLIC_HEADER ${API})
 
 set(SOURCES
 	${PTHREADS_WIN32_SOURCE}/attr.c
@@ -252,6 +251,8 @@ add_definitions(/DHAVE_PTW32_CONFIG_H)
 
 include_directories(${PTHREADS_WIN32_SOURCE})
 add_library(${PTHREADS_LIBRARY} ${PTHREADS_LIBTYPE} ${SOURCES} ${API} ${RESOURCES})
+
+set_target_properties(${PTHREADS_LIBRARY} PROPERTIES PUBLIC_HEADER ${API})
 
 if(PTHREADS_EMBEDDED_BUILD)
 	set(PTHREADS_LIBRARY ${PTHREADS_LIBRARY} PARENT_SCOPE)
