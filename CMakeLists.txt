@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.10)
 
 project(pthreads-win32)
 
-set(PTHREADS_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/glew)
+set(PTHREADS_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/pthreads-win32)
 
 set(PTHREAD_API
 	${PTHREADS_SOURCE_DIR}/pthread.h
